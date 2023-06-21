@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+<%- include('../partials/_header.ejs')  %> 
+
+<body>
+
+  <!-- Navigation -->
+  <%- include('../partials/_nav.ejs')  %>
+
+  <!-- Page Header -->
+  <header class="masthead" >
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>Login</h1>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <form action="/login" method="POST" novalidate>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Username</label>
+              <input type="text" class="form-control" name="username" placeholder="Username" id="username" required data-validation-required-message="Please enter your username.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Password</label>
+              <input type="text" class="form-control" name="password" placeholder="Password" id="password" required data-validation-required-message="Please enter your password.">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <br>
+          <div id="success"></div>
+          <button type="submit" class="btn btn-primary" id="sendMessageButton">Sign In</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Footer -->
+  <%- include('../partials/_footer.ejs')  %>
+
+  <!-- Contact Form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+
+</body>
+
+</html>
